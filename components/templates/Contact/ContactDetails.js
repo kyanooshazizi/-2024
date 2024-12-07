@@ -16,7 +16,7 @@ function ContactDetails() {
       body,
     };
 
-    const res = await fetch("http://localhost:4000/messages", {
+    const res = await fetch("https://coffee-api-liart.vercel.app/messages", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
