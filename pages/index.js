@@ -22,13 +22,13 @@ function Index({ data }) {
 }
 
 export async function getStaticProps() {
-  const servicesResponse = await fetch("http://localhost:4000/services");
+  const servicesResponse = await fetch("https://coffee-api-liart.vercel.app/services");
   const servicesData = await servicesResponse.json();
 
-  const menuResponse = await fetch("http://localhost:4000/menu");
+  const menuResponse = await fetch("https://coffee-api-liart.vercel.app/menu");
   const menuData = await menuResponse.json();
 
-  const commentsResponse = await fetch("http://localhost:4000/comments");
+  const commentsResponse = await fetch("https://coffee-api-liart.vercel.app/comments");
   const commentsData = await commentsResponse.json();
 
   return {
