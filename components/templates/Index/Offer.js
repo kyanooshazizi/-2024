@@ -6,7 +6,7 @@ function Offer() {
   const addEmail = async (event) => {
     event.preventDefault();
 
-    const response = await fetch("http://localhost:4000/newsLetters", {
+    const response = await fetch("https://coffee-api-liart.vercel.app/newsLetters", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
