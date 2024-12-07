@@ -12,7 +12,7 @@ function Testimonial({ comments }) {
 }
 
 export async function getStaticProps() {
-  const res = await fetch("http://localhost:4000/comments");
+  const res = await fetch("https://coffee-api-liart.vercel.app/comments");
   const comments = await res.json();
 
   return {
