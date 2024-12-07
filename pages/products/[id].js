@@ -13,7 +13,7 @@ const Product = ({ product, comments }) => {
 };
 
 export async function getStaticPaths(context) {
-  const res = await fetch(`http://localhost:4000/menu`);
+  const res = await fetch(`https://coffee-api-liart.vercel.app/menu`);
   const products = await res.json();
 
   const paths = products.map((product) => ({
@@ -34,7 +34,7 @@ export async function getStaticProps(context) {
   );
   const productData = await productResponse.json();
 
-  const commentsResponse = await fetch(`http://localhost:4000/comments`);
+  const commentsResponse = await fetch(`https://coffee-api-liart.vercel.app/comments`);
   const comments = await commentsResponse.json();
 
   const productComments = comments.filter(
