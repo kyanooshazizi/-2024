@@ -12,7 +12,7 @@ function Services({ services }) {
 }
 
 export async function getStaticProps(context) {
-  const res = await fetch("http://localhost:4000/services");
+  const res = await fetch("https://coffee-api-liart.vercel.app/services");
   const data = await res.json();
 
   return {
